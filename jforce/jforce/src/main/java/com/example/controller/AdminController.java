@@ -25,12 +25,12 @@ public class AdminController {
 		Admin adminDtls = adminService.getAdminDtls(admin);
 		System.out.println(adminDtls);
 		if (adminDtls != null) {
-//			if (admin.getUsernameAdmin() == adminDtls.getUsernameAdmin()
-//					&& admin.getPasswordAdmin() == adminDtls.getPasswordAdmin()) {
+			if (admin.getUsernameAdmin() == adminDtls.getUsernameAdmin()
+					&& admin.getPasswordAdmin() == adminDtls.getPasswordAdmin()) {
 				return new ResponseEntity<String>("Details are correct ", HttpStatus.FOUND);
-//			} else {
-//				return new ResponseEntity<String>("Details are incorrect", HttpStatus.NOT_FOUND);
-//			}
+			} else {
+				return new ResponseEntity<String>("Details are incorrect", HttpStatus.NOT_FOUND);
+			}
 		}
 		return new ResponseEntity<String>("invalid details ", HttpStatus.BAD_REQUEST);
 

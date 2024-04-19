@@ -61,9 +61,6 @@ const Home = () => {
                 setVstatus(json);
                 // console.log(Vstatus)
 
-                
-                
-           
         };
         fetchData();
         getStatus();

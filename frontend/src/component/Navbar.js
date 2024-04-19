@@ -13,7 +13,10 @@ const Navbar = () => {
     const navigate3 = useNavigate()
     const signout = () => {
         localStorage.removeItem('data');
+        if(window.location.pathname==="/")
         navigate('/login')
+        else
+        navigate("/adminlogin")
     }
     const register = () => {
 

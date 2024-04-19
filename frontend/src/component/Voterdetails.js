@@ -10,7 +10,7 @@ const Voterdetails = () => {
     useEffect(() => {
         const url = "http://localhost:9090/candidates/Getcandidates";
         if (localStorage.getItem('data') === null)
-            navigate("/adminhome")
+            navigate("/adminlogin")
         const fetchData = async () => {
             try {
                 const response = await fetch(url);
